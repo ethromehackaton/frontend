@@ -14,6 +14,8 @@ import { XmtpContextProvider } from '../modules/Messaging/context/XmtpContext';
 import { MessagingProvider } from '../modules/Messaging/context/messging';
 import { Web3MailProvider } from '../modules/Web3mail/context/web3mail';
 import '../styles/globals.css';
+import '/Users/stefanopomelli/work/frontend/style.css'
+
 import Layout from './Layout';
 
 export const chains: Chain[] = [polygonMumbai, iexec];
@@ -34,12 +36,13 @@ const wagmiConfig = createConfig({
 const ethereumClient = new EthereumClient(wagmiConfig, chains);
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  
   return (
     <>
       <DefaultSeo {...SEO} />
       <WagmiConfig config={wagmiConfig}>
         <TalentLayerProvider>
-          <Web3MailProvider>
             <XmtpContextProvider>
               <MessagingProvider>
                 <ThemeProvider enableSystem={false}>
@@ -50,7 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
               </MessagingProvider>
             </XmtpContextProvider>
             <ToastContainer position='bottom-right' />
-          </Web3MailProvider>
         </TalentLayerProvider>
         <Web3Modal
           projectId={projectId}

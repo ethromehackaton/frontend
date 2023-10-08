@@ -16,6 +16,13 @@ import ReviewItem from './ReviewItem';
 import ServiceStatus from './ServiceStatus';
 import Stars from './Stars';
 import { useChainId } from '../hooks/useChainId';
+import snapshot from '@snapshot-labs/snapshot.js';
+import { erc20ABI, useAccount, usePublicClient, useWalletClient } from 'wagmi';
+import { useEthersWalletClient } from '../hooks/useEthersWalletClient';
+import { useEthersProvider, useEthersSigner } from '../utils/ethers';
+
+
+
 
 function ServiceDetail({ service }: { service: IService }) {
   const chainId = useChainId();
@@ -23,6 +30,9 @@ function ServiceDetail({ service }: { service: IService }) {
   const { reviews } = useReviewsByService(service.id);
   const proposals = useProposalsByService(service.id);
   const payments = usePaymentsByService(service.id);
+  const provider = useEthersProvider()
+  const signer = useEthersSigner()
+  const publicClient = usePublicClient({ chainId });
 
   const isBuyer = user?.id === service.buyer.id;
   const isSeller = user?.id === service.seller?.id;
@@ -36,6 +46,56 @@ function ServiceDetail({ service }: { service: IService }) {
   const validatedProposal = proposals.find(proposal => {
     return proposal.status === ProposalStatusEnum.Validated;
   });
+
+  console.log(provider)
+
+ 
+
+
+  const createSnapshot = async () => {
+    const hub = 'https://testnet.snapshot.org'; // or https://testnet.snapshot.org for testnet
+    const client = new snapshot.Client712(hub);
+
+    // const web3 = new Web3Provider(window.ethereum);
+    // const [account] = await web3.listAccounts();
+
+    // Convert both dates to timestamps (in milliseconds since Unix epoch)
+    const startDateTimestamp = Math.floor(new Date().getTime() / 1000) + 100;
+    const endDateTimestamp = startDateTimestamp + 3600 * 12;
+
+    const sellerHandles = proposals.map((proposal) => proposal.seller.handle);
+    console.log({
+      space: 'cisly.eth',
+      type: 'single-choice', // define the voting system
+      title: 'vote for: ' + service.description?.title,
+      body: service.description?.about,
+      choices: sellerHandles,
+      start: startDateTimestamp,
+      end: endDateTimestamp,
+      snapshot: 40937881,
+      network: '80001',
+      discussion: '',
+      plugins: JSON.stringify({}),
+      app: 'gg', // provide the name of your project which is using this snapshot.js integration
+    })
+  
+    const receipt = await client.proposal(signer, account?.address, {
+      space: 'cisly.eth',
+      type: 'single-choice', // define the voting system
+      title: 'vote for: ' + service.description?.title,
+      body: service.description?.about,
+      choices: sellerHandles,
+      start: startDateTimestamp,
+      end: endDateTimestamp,
+      snapshot: 40937881,
+      network: '80001',
+      discussion: '',
+      plugins: JSON.stringify({}),
+      app: 'gg', // provide the name of your project which is using this snapshot.js integration
+    });
+
+    console.log(receipt)
+  }
 
   return (
     <>
@@ -104,6 +164,13 @@ function ServiceDetail({ service }: { service: IService }) {
           </div>
 
           <div className='flex flex-row gap-4 items-center border-t border-gray-700 pt-4'>
+            {isBuyer && service.status == ServiceStatusEnum.Opened && proposals?.length >= 2 && (
+              <button
+                className='text-white bg-redpraha hover:redpraha/80 hover:text-white px-3 py-2 rounded text-sm'
+                onClick={() => { createSnapshot() }}>
+                Create snapshot
+              </button>
+            )}
             {!isBuyer && service.status == ServiceStatusEnum.Opened && (
               <>
                 {!userProposal && (
@@ -169,7 +236,7 @@ function ServiceDetail({ service }: { service: IService }) {
                       <div key={i}>
                         {(service.status === ServiceStatusEnum.Opened ||
                           proposal.status === ProposalStatusEnum.Validated) && (
-                          <ProposalItem proposal={proposal} />
+                          <ProposalItem proposal={proposal} index={i} />
                         )}
                       </div>
                     );

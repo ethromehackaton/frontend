@@ -7,6 +7,7 @@ import {
 import Image from 'next/image';
 import { useState } from 'react';
 
+
 function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -16,8 +17,8 @@ function Home() {
         <div className='container relative lg:max-w-[1305px] lg:px-10'>
           <div className='flex items-center justify-between'>
             <div className='block py-4 lg:py-0'>
-              <a href='index.html' className='block max-w-[145px] sm:max-w-[180px]'>
-                <Image src='/logo-text-dark.png' alt='logo' width={125} height={15} />
+              <a href='http://localhost:3001/'>
+                <strong className='logo'>GreatGrants</strong>
               </a>
             </div>
             <button
@@ -67,14 +68,6 @@ function Home() {
                       How It Works
                     </a>
                   </li>
-                  <li className='menu-item'>
-                    <a
-                      onClick={() => setIsOpen(false)}
-                      href='#faq'
-                      className='menu-scroll inline-flex items-center text-base font-medium text-black hover:text-redpraha   lg:py-7'>
-                      Support
-                    </a>
-                  </li>
                 </ul>
               </nav>
             </div>
@@ -97,39 +90,26 @@ function Home() {
               <div className='w-full px-4 lg:w-7/12'>
                 <div className='wow fadeInUp mb-12 lg:mb-0 lg:max-w-[570px]' data-wow-delay='.2s'>
                   <span className='mb-5 block text-lg font-medium leading-tight text-black  sm:text-[22px] xl:text-[22px]'>
-                    Ready to Use NextJS dapp.
+                    Powered by Talent Layer
                   </span>
-                  <h1 className='mb-6 text-3xl font-bold leading-tight text-black  sm:text-[40px] md:text-[50px] lg:text-[42px] xl:text-[50px]'>
-                    Using
+                  <h1 className='mb-6 text-3xl font-bold leading-tight text-black  sm:text-[40px] md:text-[60px] lg:text-[42px] xl:text-[50px]'>
+                    Where
                     <span className='inline bg-redpraha bg-clip-text text-transparent mx-2'>
-                      TalentLayer & XMTP
+                      talent
                     </span>
-                    protocols.
+                    is truly rewarded.
                   </h1>
                   <p className='mb-10 max-w-[475px] text-base leading-relaxed text-body'>
-                    All essential components to start building an amazing dapp with interoperable
-                    work and messaging
+                  GreatGrants is a groundbreaking decentralized voting system using DAO, enabling members to fairly allocate awards and scholarships based on transparent and accurate data about participants' reputation and experience.
                   </p>
 
                   <div className='flex flex-wrap items-center'>
                     <a
                       target='_blank'
-                      href='https://github.com/TalentLayer-Labs/starter-kit'
+                      href='/dashboard'
                       className='mr-6 mb-6 inline-flex h-[60px] items-center rounded-lg bg-black py-[14px] px-[30px] text-white hover:bg-opacity-90'>
-                      <span className='mr-[18px] border-r border-stroke border-opacity-40 pr-[18px] leading-relaxed '>
-                        Fork Now
-                      </span>
-                      <span>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'>
-                          <path
-                            fill='#FFF'
-                            d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
-                          />
-                        </svg>
+                      <span className=' border-stroke border-opacity-40leading-relaxed '>
+                        Get Started
                       </span>
                     </a>
 
@@ -163,36 +143,31 @@ function Home() {
                   className='wow fadeInUp relative z-10 mx-auto w-full max-w-[530px] pt-8 lg:mr-0'
                   data-wow-delay='.3s'>
                   <img
-                    src='/images/home/hero/hero-light.png'
+                    src='/images/home/hero/laptop-mockup.png'
                     alt='hero image'
-                    className='mx-auto max-w-full'
+                    className='mx-auto max-w-full hero-img'
                   />
                   <div className='max-auto absolute top-0 left-0 right-0 -z-10 aspect-square w-full rounded-full bg-redpraha'>
-                    <div className='absolute top-5 right-0'>
+                  <div className='absolute top-0 right-5 -z-10 stars'>
                       <svg
                         width='72'
-                        height='51'
-                        viewBox='0 0 72 51'
+                        height='50'
+                        viewBox='0 0 72 50'
                         fill='none'
                         xmlns='http://www.w3.org/2000/svg'>
-                        <g clipPath='url(#clip0_5_3665)'>
+                        <g clipPath='url(#clip0_33_10)'>
                           <path
-                            d='M22.378 0.4157C22.3814 0.342879 22.3851 0.270712 22.3891 0.199219C22.3857 0.271606 22.382 0.343766 22.378 0.4157C22.0401 7.83785 25.7079 22.0514 43.163 21.2025C36.0333 21.7022 21.9045 26.7677 22.3875 43.0291C22.1659 35.9367 17.5749 21.9221 1.00683 21.8442C0.856728 21.8465 0.709534 21.8469 0.56543 21.8454C0.713499 21.8439 0.86063 21.8435 1.00683 21.8442C8.04005 21.7355 21.4537 17.3609 22.378 0.4157Z'
+                            d='M21.8126 0.216481C21.8159 0.143661 21.8196 0.071493 21.8237 0C21.8203 0.0723874 21.8165 0.144547 21.8126 0.216481C21.4747 7.63863 25.1425 21.8522 42.5976 21.0032C35.4678 21.503 21.3391 26.5685 21.822 42.8298C21.6005 35.7375 17.0094 21.7229 0.441399 21.645C0.291298 21.6473 0.144104 21.6477 0 21.6462C0.148069 21.6447 0.2952 21.6443 0.441399 21.645C7.47462 21.5363 20.8883 17.1617 21.8126 0.216481Z'
                             fill='#ff0050'
                           />
                           <path
-                            d='M59.3487 24.4888C59.3506 24.4451 59.3528 24.4018 59.3552 24.3589C59.3532 24.4023 59.351 24.4456 59.3487 24.4888C59.1459 28.942 61.3466 37.4702 71.8196 36.9608C67.5418 37.2606 59.0645 40.3 59.3543 50.0568C59.2213 45.8014 56.4667 37.3926 46.5259 37.3459C46.4359 37.3473 46.3475 37.3475 46.261 37.3466C46.3499 37.3457 46.4382 37.3454 46.5259 37.3459C50.7458 37.2807 58.794 34.6559 59.3487 24.4888Z'
+                            d='M58.7832 24.2896C58.7851 24.2459 58.7874 24.2025 58.7898 24.1597C58.7878 24.2031 58.7855 24.2464 58.7832 24.2896C58.5804 28.7428 60.7811 37.271 71.2541 36.7616C66.9763 37.0614 58.499 40.1008 58.7888 49.8576C58.6559 45.6022 55.9013 37.1934 45.9605 37.1467C45.8704 37.1481 45.782 37.1482 45.6956 37.1474C45.7844 37.1465 45.8727 37.1462 45.9605 37.1467C50.1803 37.0815 58.2286 34.4567 58.7832 24.2896Z'
                             fill='#1e293b'
                           />
                         </g>
                         <defs>
-                          <clipPath id='clip0_5_3665'>
-                            <rect
-                              width='71.2541'
-                              height='49.8779'
-                              fill='white'
-                              transform='translate(0.56543 0.199219)'
-                            />
+                          <clipPath id='clip0_33_10'>
+                            <rect width='71.2541' height='49.8779' fill='white' />
                           </clipPath>
                         </defs>
                       </svg>
@@ -243,12 +218,10 @@ function Home() {
               className='wow fadeInUp mx-auto mb-14 max-w-[690px] text-center lg:mb-[70px]'
               data-wow-delay='.2s'>
               <h2 className='mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight'>
-                Amazing features to make your work easier
+              Discover GreatGrants Incredible Features
               </h2>
               <p className='text-base text-body'>
-                With value-added features and a user-friendly environment, our starter kit empowers
-                you to unlock the full potential of TalentLayer and XMTP, enabling the creation of
-                an outstanding dapp experience
+              Welcome to GreatGrants, the innovative DAO voting system transforming awards and scholarships allocation with transparency and fairness. Explore our key features:
               </p>
             </div>
           </div>
@@ -261,41 +234,13 @@ function Home() {
                     className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
                     data-wow-delay='.2s'>
                     <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='44'
-                        height='44'
-                        viewBox='0 0 487.451 487.451'>
-                        <g>
-                          <path
-                            fill='#ff0050'
-                            d='M371.694,63.921h-87.83V88.06c0,4.046-3.281,7.326-7.326,7.326h-59.521c-3.164,0-5.851-2.01-6.876-4.819
-		c0.353,0.054,0.71,0.089,1.077,0.089h59.521c4.045,0,7.325-3.28,7.325-7.326V7.326c0-4.045-3.28-7.326-7.325-7.326h-59.521
-		c-4.047,0-7.326,3.281-7.326,7.326v56.596h-88.136c-4.046,0-7.326,3.281-7.326,7.326v408.879c0,4.045,3.28,7.324,7.326,7.324
-		h255.938c4.046,0,7.326-3.279,7.326-7.324V71.247C379.021,67.203,375.74,63.921,371.694,63.921z M226.48,26.247h28.994
-		c5.271,0,9.541,4.271,9.541,9.54s-4.271,9.54-9.541,9.54H226.48c-5.268,0-9.54-4.271-9.54-9.54S221.212,26.247,226.48,26.247z
-		 M205.566,169.084l0.293-0.337c1.13-0.82,1.68-2.11,1.464-3.43c-2.823-17.042-0.974-24.141-0.336-25.921
-		c4.931-15.135,20.479-22.223,23.53-23.474c0.638-0.248,1.827-0.615,3.082-0.811l0.32-0.075l2.575-0.143l0.014,0.158l0.55-0.045
-		l2.183-0.386c0.479,0.003,6.479,0.752,15.52,3.53l6.237,2.14c11.382,3.365,16.676,9.663,17.656,10.922
-		c9.139,10.367,6.701,26.012,4.424,34.415c-0.248,0.966-0.098,1.975,0.449,2.796l0.516,0.659c0.834,1.11,1.146,4.843-0.719,11.769
-		c-0.383,2.26-1.213,4.094-2.457,5.315c-0.429,0.473-0.75,1.117-0.871,1.807c-3.096,18.125-19.323,38.402-36.438,38.402
-		c-14.546,0-31.129-18.662-34.11-38.384c-0.11-0.72-0.417-1.361-0.918-1.912c-1.238-1.285-2.035-3.145-2.518-5.899
-		C204.573,174.992,204.429,170.824,205.566,169.084z M172.086,248.342c0.121-0.156,3.497-4.445,11.511-7.504
-		c0,0,17.322-6.747,17.646-6.855c9.015-3.272,18.066-10.093,18.066-10.093l0.621,0.539c7.484,6.446,15.589,9.857,23.432,9.857
-		c0.045,0,0.091-0.004,0.136-0.006c0,0,0.546,0.006,0.591,0.006c7.843,0,15.947-3.411,23.432-9.857l0.622-0.539
-		c0,0,9.051,6.82,18.064,10.093c0.324,0.108,17.646,6.855,17.646,6.855c8.014,3.059,11.391,7.348,11.511,7.504
-		c12.41,18.43,14.507,58.693,14.718,63.191c-0.097,6.309-1.885,7.915-2.361,8.238c-26.687,11.939-62.956,16.791-84.223,16.791
-		s-57.082-4.852-83.768-16.791c-0.477-0.323-2.265-1.932-2.36-8.238C157.58,307.036,159.677,266.771,172.086,248.342z
-		 M285.438,433.861H150.569v-21.553h134.868V433.861L285.438,433.861z M336.882,391.455H150.569v-21.553h186.312V391.455z'
-                          />
-                        </g>
-                      </svg>
+                    <BriefcaseIcon width={48} height={48} />
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Identity
+                      Professional Experience
                     </h3>
                     <p className='text-base text-body'>
-                      Easily create and manage user identities with TalentLayerId soulbound NFT
+                    We extract reputation and professional experience data directly from Talent Layer, providing a solid foundation for informed voting.
                     </p>
                   </div>
                 </div>
@@ -305,13 +250,13 @@ function Home() {
                     className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
                     data-wow-delay='.3s'>
                     <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
-                      <ChatBubbleBottomCenterTextIcon width={48} height={48} />
+                    <SparklesIcon width={48} height={48} />
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Web3 messaging
+                    Decentralized Voting
                     </h3>
                     <p className='text-base text-body'>
-                      Enable direct and secure messaging between wallets using XMTP
+                    Voting takes place through SnapShot, our decentralized voting tool, ensuring maximum security and transparency.
                     </p>
                   </div>
                 </div>
@@ -320,86 +265,19 @@ function Home() {
                   <div
                     className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
                     data-wow-delay='.4s'>
-                    <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
-                      <BriefcaseIcon width={48} height={48} />
-                    </div>
-                    <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Gig & proposal workflow
-                    </h3>
-                    <p className='text-base text-body'>
-                      Smart contract interractions to connect with the TalentLayer open network
-                    </p>
-                  </div>
-                </div>
-
-                <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
-                  <div
-                    className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
-                    data-wow-delay='.2s'>
                     <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
                       <BanknotesIcon width={48} height={48} />
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Secured escrow
+                    Voting Influence
                     </h3>
                     <p className='text-base text-body'>
-                      Ensure trust and security in transactions with TalentLayer escrow system
+                    The number of GreatGrants coins you possess determines the influence of your vote, rewarding engagement and community involvement.
                     </p>
                   </div>
                 </div>
 
-                <div className='w-full px-4 md:w-1/2 lg:w-1/3'>
-                  <div
-                    className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
-                    data-wow-delay='.3s'>
-                    <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
-                      <svg
-                        width='40'
-                        height='40'
-                        viewBox='0 0 40 40'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'>
-                        <g clipPath='url(#clip0_211_943)'>
-                          <path
-                            d='M11.2535 28.9978C11.5633 28.1197 12.1379 27.3593 12.898 26.8215C13.6581 26.2837 14.5663 25.9949 15.4974 25.9949C16.4286 25.9949 17.3368 26.2837 18.0969 26.8215C18.857 27.3593 19.4316 28.1197 19.7414 28.9978H34.9927V31.9971H19.7414C19.4316 32.8751 18.857 33.6355 18.0969 34.1733C17.3368 34.7112 16.4286 35 15.4974 35C14.5663 35 13.6581 34.7112 12.898 34.1733C12.1379 33.6355 11.5633 32.8751 11.2535 31.9971H5V28.9978H11.2535ZM20.2513 18.5004C20.5611 17.6223 21.1357 16.8619 21.8958 16.3241C22.6559 15.7862 23.5641 15.4974 24.4952 15.4974C25.4264 15.4974 26.3346 15.7862 27.0947 16.3241C27.8548 16.8619 28.4294 17.6223 28.7392 18.5004H34.9927V21.4996H28.7392C28.4294 22.3777 27.8548 23.1381 27.0947 23.6759C26.3346 24.2138 25.4264 24.5026 24.4952 24.5026C23.5641 24.5026 22.6559 24.2138 21.8958 23.6759C21.1357 23.1381 20.5611 22.3777 20.2513 21.4996H5V18.5004H20.2513ZM11.2535 8.00294C11.5633 7.12486 12.1379 6.36449 12.898 5.82666C13.6581 5.28882 14.5663 5 15.4974 5C16.4286 5 17.3368 5.28882 18.0969 5.82666C18.857 6.36449 19.4316 7.12486 19.7414 8.00294H34.9927V11.0022H19.7414C19.4316 11.8803 18.857 12.6407 18.0969 13.1785C17.3368 13.7163 16.4286 14.0051 15.4974 14.0051C14.5663 14.0051 13.6581 13.7163 12.898 13.1785C12.1379 12.6407 11.5633 11.8803 11.2535 11.0022H5V8.00294H11.2535Z'
-                            fill='currentColor'
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id='clip0_211_943'>
-                            <rect width='40' height='40' fill='white' />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                    <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Reputation
-                    </h3>
-                    <p className='text-base text-body'>
-                      Empowers users to review each other fostering trust within your dapp
-                    </p>
-                  </div>
-                </div>
-
-                <div className='w-full px-4 md:w-1/2 lg:w-1/3 relative'>
-                  <div
-                    className='wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center'
-                    data-wow-delay='.4s'>
-                    <div className='mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-redpraha bg-opacity-20 text-redpraha duration-300 group-hover:bg-redpraha group-hover:text-white   '>
-                      <SparklesIcon width={48} height={48} />
-                    </div>
-                    <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Landing page
-                    </h3>
-                    {/* <div className='absolute top-[-5px] right-[40px] md:right-[100px] p-2 bg-redpraha text-white text-xs rounded-md'>
-                      Coming Soon
-                    </div> */}
-                    <p className='text-base text-body'>
-                      This landing is part of the starter, please customize it with your brand and
-                      features!
-                    </p>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -498,9 +376,9 @@ function Home() {
                     className='wow fadeInUp relative z-10 mx-auto mb-14 w-full max-w-[470px] pb-6 lg:mx-0 lg:mb-0'
                     data-wow-delay='.2s'>
                     <img
-                      src='/images/home/about/about-1-light.png'
+                      src='/images/home/about/mockup-mobile.png'
                       alt='about image'
-                      className='mx-auto max-w-full'
+                      className='mx-auto max-w-full about-img'
                     />
 
                     <div className='absolute top-0 right-5 -z-10'>
@@ -569,48 +447,18 @@ function Home() {
                 <div className='w-full px-4 lg:w-1/2'>
                   <div className='wow fadeInUp lg:ml-auto lg:max-w-[510px]' data-wow-delay='.3s'>
                     <span className='mb-4 block text-lg font-medium text-redpraha md:text-[22px]'>
-                      The open source starterKit
+                      Abous us
                     </span>
                     <h2 className='mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight'>
-                      Build the future of Work
+                    Our Commitment to Equity and Innovation
                     </h2>
                     <p className='mb-[30px] text-base leading-relaxed text-body'>
-                      This project aims to help builders and hackers to start fast on using XMTP and
-                      TalentLayer protocols. It contains demo code for all the previous features.
-                      <br />
-                      These are some examples of what you can build:
-                    </p>
+                    We are GreatGrants, a passionate team committed to community and fairness in award distribution. With extensive experience in blockchain and decentralized tech, our experts are united by a vision of a fairer system. Join us on this journey of innovation and equity!
+                      
+                      
+                   </p>
 
-                    <div className='mb-[30px] flex items-center'>
-                      <div className='shrink-0 mr-3 flex h-[60px] w-[60px] items-center justify-center rounded-full border border-stroke text-xl font-semibold text-black text-center '>
-                        01
-                      </div>
-                      <div>
-                        <h5 className='text-xl font-medium text-black '>
-                          In-Chat Bounty Management
-                        </h5>
-                        <p className='text-base text-body'>
-                          a messaging app with native features to manage hiring and paying bounties.
-                          Imagine if you could submit your hackathon project, get it approved for a
-                          bounty, and receive payment, all with a few DMs, without leaving your
-                          messaging app.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className='flex items-center'>
-                      <div className='shrink-0 mr-3 flex h-[60px] w-[60px] items-center justify-center rounded-full border border-stroke text-xl font-semibold text-black  '>
-                        02
-                      </div>
-                      <div>
-                        <h5 className='text-xl font-medium text-black '>In-Chat Gig transaction</h5>
-                        <p className='text-base text-body'>
-                          Imagine an app tailored for freelancers, enabling effortless communication
-                          with clients, seamless agreement on gigs, and secure payments all through
-                          simple messaging.
-                        </p>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
@@ -650,8 +498,7 @@ function Home() {
                 How it Works?
               </h2>
               <p className='text-base text-body'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
-                Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+              GreatGrants is designed to be simple and effective. Here's how it works:
               </p>
             </div>
           </div>
@@ -684,16 +531,11 @@ function Home() {
                       </svg>
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Fork the code
+                    Data Extraction
                     </h3>
                     <p className='text-base text-body'>
-                      All the code is fully open source, you can use it for any purposes,{' '}
-                      <a
-                        className='underline'
-                        target='_blank'
-                        href='https://docs.talentlayer.org/get-a-platform-id'>
-                        it's here
-                      </a>
+                    We extract reputation and professional experience data from participants from Talent Layer, ensuring reliable data.{' '}
+                     
                     </p>
                   </div>
                 </div>
@@ -723,11 +565,10 @@ function Home() {
                       </svg>
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Setup
+                    Informed Voting
                     </h3>
                     <p className='text-base text-body'>
-                      Setup your local environnement by copying the .env.example and adjust the
-                      variables
+                      Community members use this data to vote on awards and scholarships in an informed manner.
                     </p>
                   </div>
                 </div>
@@ -757,11 +598,10 @@ function Home() {
                       </svg>
                     </div>
                     <h3 className='mb-4 text-xl font-semibold text-black  sm:text-[22px] xl:text-[26px]'>
-                      Enjoy and code!
+                    Decentralized Voting
                     </h3>
                     <p className='text-base text-body'>
-                      You can now start coding and improve the basic messaging system with your
-                      incredible features!
+                    Voting takes place through SnapShot, a decentralized system that ensures security and transparency.
                     </p>
                   </div>
                 </div>
@@ -812,513 +652,12 @@ function Home() {
             </svg>
           </div>
 
-          <div className='absolute right-0 top-20 -z-10'>
-            <svg
-              width='637'
-              height='1277'
-              viewBox='0 0 637 1277'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <g opacity='0.2' filter='url(#filter0_f_38_23)'>
-                <circle cx='638.5' cy='638.5' r='388.5' fill='url(#paint0_linear_38_23)' />
-              </g>
-              <defs>
-                <filter
-                  id='filter0_f_38_23'
-                  x='0'
-                  y='0'
-                  width='1277'
-                  height='1277'
-                  filterUnits='userSpaceOnUse'
-                  colorInterpolationFilters='sRGB'>
-                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
-                  <feBlend
-                    mode='normal'
-                    in='SourceGraphic'
-                    in2='BackgroundImageFix'
-                    result='shape'
-                  />
-                  <feGaussianBlur stdDeviation='125' result='effect1_foregroundBlur_38_23' />
-                </filter>
-                <linearGradient
-                  id='paint0_linear_38_23'
-                  x1='250'
-                  y1='250'
-                  x2='1168.59'
-                  y2='782.957'
-                  gradientUnits='userSpaceOnUse'>
-                  <stop stopColor='#FF8FE8' />
-                  <stop offset='1' stopColor='#FFC960' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+          
         </section>
 
-        <section id='testimonials' className='relative z-10 pt-[110px] pb-[60px]'>
-          <div className='container'>
-            <div
-              className='wow fadeInUp mx-auto mb-14 max-w-[690px] text-center lg:mb-[70px]'
-              data-wow-delay='.2s'>
-              <h2 className='mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight'>
-                What Dev's Say
-              </h2>
-              <p className='text-base text-body'>
-                We highly value feedback from our users as it plays a crucial role in enhancing our
-                starter kit, refining the user experience, and continuously improving the features
-                and functionality to meet the evolving needs of our community.
-              </p>
-            </div>
-          </div>
+        
+       
 
-          <div className='container overflow-hidden lg:max-w-[1160px]'>
-            <div className='-mx-6 flex flex-wrap'>
-              <div className='w-full px-6 lg:w-1/2'>
-                <div
-                  className='wow fadeInUp mb-[50px] rounded-lg bg-white py-9 px-7 shadow-md sm:px-9 lg:px-7 xl:px-9'
-                  data-wow-delay='.2s'>
-                  <div className='mb-5 border-b border-stroke'>
-                    <p className='pb-9 text-base text-body'>
-                      The integration process of the TalentLayer and XMTP protocols was seamless
-                      using your starter kit. It saved us a significant amount of time and effort,
-                      allowing us to focus more on building unique features for our dapp. The
-                      documentation provided was clear and comprehensive, making it easy for our
-                      development team to understand and utilize the kit effectively.
-                    </p>
-                  </div>
-
-                  <div className='items-center justify-between sm:flex lg:block xl:flex'>
-                    <div className='mb-4 flex items-center sm:mb-0 lg:mb-4 xl:mb-0'>
-                      <div className='mr-4 h-[56px] w-full max-w-[56px] rounded-full'>
-                        <img
-                          src='/images/home/testimonials/author-1.png'
-                          alt='author'
-                          className='h-full w-full object-cover object-center'
-                        />
-                      </div>
-                      <div>
-                        <h5 className='text-base font-medium text-black '>Martin</h5>
-                        <p className='text-sm text-body'>Fullstack dev</p>
-                      </div>
-                    </div>
-
-                    <div className='flex items-center space-x-3 sm:justify-end lg:justify-start xl:justify-end'>
-                      <p className='text-base font-medium text-black '>5.0</p>
-                      <div className='flex items-center space-x-[6px]'>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className='w-full px-6 lg:w-1/2'>
-                <div
-                  className='wow fadeInUp mb-[50px] rounded-lg bg-white py-9 px-7 shadow-md sm:px-9 lg:px-7 xl:px-9'
-                  data-wow-delay='.3s'>
-                  <div className='mb-5 border-b border-stroke'>
-                    <p className='pb-9 text-base text-body'>
-                      We appreciate the value-added features included in your starter kit. The
-                      pre-built components and streamlined development environment made it simple to
-                      create a great dapp experience quickly. Additionally, the responsiveness of
-                      your support team in addressing our queries and providing guidance was
-                      outstanding. <br />
-                      Thank you :)
-                    </p>
-                  </div>
-
-                  <div className='items-center justify-between sm:flex lg:block xl:flex'>
-                    <div className='mb-4 flex items-center sm:mb-0 lg:mb-4 xl:mb-0'>
-                      <div className='mr-4 h-[56px] w-full max-w-[56px] rounded-full'>
-                        <img
-                          src='/images/home/testimonials/author-2.png'
-                          alt='author'
-                          className='h-full w-full object-cover object-center'
-                        />
-                      </div>
-                      <div>
-                        <h5 className='text-base font-medium text-black '>Tonio</h5>
-                        <p className='text-sm text-body'>Entreprener</p>
-                      </div>
-                    </div>
-
-                    <div className='flex items-center space-x-3 sm:justify-end lg:justify-start xl:justify-end'>
-                      <p className='text-base font-medium text-black '>5.0</p>
-                      <div className='flex items-center space-x-[6px]'>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                        <span>
-                          <svg
-                            width='20'
-                            height='20'
-                            viewBox='0 0 20 20'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'>
-                            <g clipPath='url(#clip0_49_480)'>
-                              <path
-                                d='M10 15.2171L4.1225 18.5071L5.435 11.9004L0.489166 7.32712L7.17833 6.53378L10 0.417114L12.8217 6.53378L19.5108 7.32712L14.565 11.9004L15.8775 18.5071L10 15.2171Z'
-                                fill='#EABF23'
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id='clip0_49_480'>
-                                <rect
-                                  width='20'
-                                  height='20'
-                                  fill='white'
-                                  transform='translate(0 0.000488281)'
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id='faq' className='relative z-10 bg-[#F8FAFB] py-[110px] '>
-          <div className='container'>
-            <div
-              className='wow fadeInUp mx-auto mb-14 max-w-[690px] text-center lg:mb-[70px]'
-              data-wow-delay='.2s'>
-              <h2 className='mb-4 text-3xl font-bold text-black  sm:text-4xl md:text-[44px] md:leading-tight'>
-                Frequently Asked Questions
-              </h2>
-              <p className='text-base text-body'>
-                Find answers to commonly asked questions about our Next.js starter kit for
-                TalentLayer and XMTP integration, helping you navigate through the implementation
-                process and make the most out of the powerful features provided.
-              </p>
-            </div>
-
-            <div
-              className='faqs wow fadeInUp mx-auto w-full max-w-[785px] rounded-lg bg-white px-6 py-[6px] shadow-car'
-              data-wow-delay='.3s'>
-              <div className='faq border-b border-stroke last-of-type:border-none'>
-                <button className='faq-btn relative flex w-full justify-between pt-6 pb-1 px-[18px] text-left text-base font-medium text-black  sm:px-[26px] sm:text-lg'>
-                  Are there any specific requirements or dependencies for using the starter kit?
-                </button>
-                <div className='pb-4 h-auto overflow-hidden px-[18px] sm:px-[26px]'>
-                  <p className='text-base text-body'>Just NodeJS & npm</p>
-                </div>
-              </div>
-
-              <div className='faq border-b border-stroke last-of-type:border-none'>
-                <button className='faq-btn relative flex w-full justify-between pt-6 pb-1 px-[18px] text-left text-base font-medium text-black  sm:px-[26px] sm:text-lg'>
-                  Do I need an admin account for XMTP?
-                </button>
-                <div className='pb-4 h-auto overflow-hidden px-[18px] sm:px-[26px]'>
-                  <p className='text-base text-body'>
-                    No, you do not need an admin account to use XMTP. The XMTP protocol is designed
-                    to be plug and play, allowing users to seamlessly integrate and utilize its
-                    functionality without the need for an admin account.
-                  </p>
-                </div>
-              </div>
-
-              <div className='faq border-b border-stroke last-of-type:border-none'>
-                <button className='faq-btn relative flex w-full justify-between pt-6 pb-1 px-[18px] text-left text-base font-medium text-black  sm:px-[26px] sm:text-lg'>
-                  Can I extend the review system to include additional criteria or metrics?
-                </button>
-                <div className='pb-4 h-auto overflow-hidden px-[18px] sm:px-[26px]'>
-                  <p className='text-base text-body'>
-                    Yes, TalentLayer the minimum viable for interoperability. You can add any other
-                    fields in the IPFS json linked to a review. This is also the case for user
-                    profile and service data.
-                  </p>
-                </div>
-              </div>
-
-              <div className='faq border-b border-stroke last-of-type:border-none'>
-                <button className='faq-btn relative flex w-full justify-between pt-6 pb-1 px-[18px] text-left text-base font-medium text-black  sm:px-[26px] sm:text-lg'>
-                  Do I need a TalentLayer platform Id?
-                </button>
-                <div className='pb-4 h-auto overflow-hidden px-[18px] sm:px-[26px]'>
-                  <p className='text-base text-body'>
-                    Yes it's better to mint your platformId, it will let you configure your
-                    platform, define fees and other important setup.{' '}
-                    <a className='underline' href='https://docs.talentlayer.org/get-a-platform-id'>
-                      See more here
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='absolute right-0 -top-24 -z-10'>
-            <svg
-              width='95'
-              height='190'
-              viewBox='0 0 95 190'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <circle cx='95' cy='95' r='77' stroke='url(#paint0_linear_49_603)' strokeWidth='36' />
-              <defs>
-                <linearGradient
-                  id='paint0_linear_49_603'
-                  x1='0'
-                  y1='0'
-                  x2='224.623'
-                  y2='130.324'
-                  gradientUnits='userSpaceOnUse'>
-                  <stop stopColor='#FF8FE8' />
-                  <stop offset='1' stopColor='#FFC960' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className='absolute left-0 -bottom-24 -z-10'>
-            <svg
-              width='95'
-              height='190'
-              viewBox='0 0 95 190'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <circle cy='95' r='77' stroke='url(#paint0_linear_52_83)' strokeWidth='36' />
-              <defs>
-                <linearGradient
-                  id='paint0_linear_52_83'
-                  x1='-117.84'
-                  y1='190'
-                  x2='117.828'
-                  y2='25.9199'
-                  gradientUnits='userSpaceOnUse'>
-                  <stop stopColor='#0f172a' />
-                  <stop stopColor='#FF8FE8' />
-                  <stop offset='1' stopColor='#FFC960' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </section>
 
         <section id='support' className='pt-[100px] pb-[110px]'>
           <div className='container'>

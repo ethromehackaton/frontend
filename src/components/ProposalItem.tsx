@@ -7,8 +7,9 @@ import { renderTokenAmount } from '../utils/conversion';
 import { formatDate } from '../utils/dates';
 import ValidateProposalModal from './Modal/ValidateProposalModal';
 import Image from 'next/image';
+import VoteModal from './Modal/VoteModal';
 
-function ProposalItem({ proposal }: { proposal: IProposal }) {
+function ProposalItem({ proposal, index }: { proposal: IProposal, index: number }) {
   const { user, account } = useContext(TalentLayerContext);
   const service = useServiceById(proposal.service.id);
 
@@ -66,6 +67,9 @@ function ProposalItem({ proposal }: { proposal: IProposal }) {
           </p>
           {account && isBuyer && proposal.status === ProposalStatusEnum.Pending && (
             <ValidateProposalModal proposal={proposal} account={account} />
+          )}
+          {account && proposal.status === ProposalStatusEnum.Pending && (
+            <VoteModal proposal={proposal} account={account} index={index} />
           )}
         </div>
         {account &&

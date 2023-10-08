@@ -9,6 +9,7 @@ import ShareModal from '../../../modules/Messaging/components/ShareModal';
 import { XmtpContext } from '../../../modules/Messaging/context/XmtpContext';
 import useStreamConversations from '../../../modules/Messaging/hooks/useStreamConversations';
 
+
 function MessagingIndex() {
   const chainId = useChainId();
   const { account, user } = useContext(TalentLayerContext);
