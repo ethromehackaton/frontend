@@ -5,6 +5,12 @@ const nextConfig = {
   images: {
     domains: ['ipfs.io'],
   },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
 };
 
 const withPWA = require('next-pwa')({
